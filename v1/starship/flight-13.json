@@ -6,19 +6,170 @@
   "vehicle": "Starship",
   "name": "Starship | Flight 13",
   "provider": "SpaceX",
-  "truth": "pending",
-  "truth_note": "Placeholder until published/observed event times are locked. App must show PENDING REAL TELEMETRY until pending=false.",
+  "truth": "published",
+  "truth_note": "Event times from SpaceX Starship Flight 13 mission page timeline (spacex.com/launches/starship-flight-13). Not MCC downlink. Booster landing burn did not achieve soft splash as planned.",
   "status": "success",
-  "t0_utc": null,
-  "t0_source": "ll2_net",
-  "updated_utc": "2026-09-16T12:00:00Z",
-  "sources": [],
+  "t0_utc": "2026-07-24T22:51:00Z",
+  "t0_source": "agency",
+  "updated_utc": "2026-09-16T12:51:01Z",
+  "sources": [
+    {
+      "kind": "agency",
+      "url": "https://www.spacex.com/launches/starship-flight-13",
+      "note": "SpaceX published timeline"
+    },
+    {
+      "kind": "ll2",
+      "id": "PENDING_LL2_UUID"
+    }
+  ],
   "goal": "PERFORMANCE TEST",
   "outcome": {
-    "booster": null,
-    "ship": null,
-    "payload": null
+    "booster": "GULF LANDING BURN \u2014 HARD IMPACT / DESTROYED",
+    "ship": "INTACT SPLASHDOWN \u2014 INDIAN OCEAN",
+    "payload": "20 STARLINK V3 DEPLOYED \u2014 DEMISED ~20m AFTER DEPLOY"
   },
-  "events": [],
-  "pending": true
+  "events": [
+    {
+      "id": "ss13_lift",
+      "t_sec": 0,
+      "title": "LIFTOFF",
+      "detail": "Starbase \u2014 Super Heavy / Starship V3",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_maxq",
+      "t_sec": 58,
+      "title": "MAX-Q",
+      "detail": "Peak aerodynamic pressure",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_meco",
+      "t_sec": 138,
+      "title": "BOOSTER MECO",
+      "detail": "Super Heavy most engines cut off",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_hot",
+      "t_sec": 141,
+      "title": "HOT-STAGE",
+      "detail": "Ship Raptor ignition and stage separation",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_bb",
+      "t_sec": 145,
+      "title": "BOOSTBACK START",
+      "detail": "Super Heavy boostback burn start",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_bb_end",
+      "t_sec": 183,
+      "title": "BOOSTBACK END",
+      "detail": "Super Heavy boostback burn shutdown",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_lb",
+      "t_sec": 387,
+      "title": "LANDING BURN",
+      "detail": "Super Heavy landing burn start",
+      "severity": "WATCH"
+    },
+    {
+      "id": "ss13_lb_end",
+      "t_sec": 413,
+      "title": "LANDING BURN END",
+      "detail": "Super Heavy landing burn shutdown",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_seco",
+      "t_sec": 485,
+      "title": "SHIP CUTOFF",
+      "detail": "Starship engine cutoff",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_dep",
+      "t_sec": 1000,
+      "title": "STARLINK V3 DEPLOY START",
+      "detail": "Payload deploy demo start \u2014 20 sats",
+      "severity": "WATCH"
+    },
+    {
+      "id": "ss13_dep_done",
+      "t_sec": 1659,
+      "title": "STARLINK V3 DEPLOY COMPLETE",
+      "detail": "Payload deploy demo complete",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_relight",
+      "t_sec": 2338,
+      "title": "SHIP RELIGHT",
+      "detail": "Raptor in-space relight demo",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_entry",
+      "t_sec": 2850,
+      "title": "REENTRY",
+      "detail": "Starship entry",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_transonic",
+      "t_sec": 3743,
+      "title": "TRANSONIC",
+      "detail": "Starship is transonic",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_subsonic",
+      "t_sec": 3781,
+      "title": "SUBSONIC",
+      "detail": "Starship is subsonic",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_land_burn",
+      "t_sec": 3901,
+      "title": "LANDING BURN",
+      "detail": "Ship landing burn start",
+      "severity": "WATCH"
+    },
+    {
+      "id": "ss13_flip",
+      "t_sec": 3903,
+      "title": "LANDING FLIP",
+      "detail": "Landing flip",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_3to2",
+      "t_sec": 3912,
+      "title": "LANDING BURN 3\u21922",
+      "detail": "Landing burn 3 to 2 engines",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_2to1",
+      "t_sec": 3919,
+      "title": "LANDING BURN 2\u21921",
+      "detail": "Landing burn 2 to 1 engine",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss13_splash",
+      "t_sec": 3921,
+      "title": "SHIP SPLASHDOWN",
+      "detail": "Intact splashdown \u2014 Indian Ocean",
+      "severity": "INFO"
+    }
+  ],
+  "pending": false
 }

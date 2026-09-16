@@ -1,6 +1,19 @@
 {
   "schema": "lrt.mission_tape_index.v1",
-  "updated_utc": "2026-09-16T12:00:00Z",
+  "updated_utc": "2026-09-16T12:51:01Z",
   "base": "https://raw.githubusercontent.com/skiiwa67-collab/lrt-mission-tapes/main/v1",
-  "packs": []
+  "packs": [
+    {
+      "slug": "starship-flight-11",
+      "path": "starship/flight-11.json",
+      "truth": "published",
+      "pending": false
+    },
+    {
+      "slug": "starship-flight-13",
+      "path": "starship/flight-13.json",
+      "truth": "published",
+      "pending": false
+    }
+  ]
 }

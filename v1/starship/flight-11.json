@@ -6,19 +6,170 @@
   "vehicle": "Starship",
   "name": "Starship | Flight 11",
   "provider": "SpaceX",
-  "truth": "pending",
-  "truth_note": "Placeholder. Fill with published/observed events only. Not MCC downlink. Not generic chopsticks template.",
+  "truth": "published",
+  "truth_note": "Event times from SpaceX Starship Flight 11 mission page timeline (spacex.com/launches/starship-flight-11). Liftoff listed at 00:00:02 on page \u2014 t_sec normalized so liftoff=0. Not MCC downlink. Booster: planned Gulf splash (no tower catch).",
   "status": "success",
-  "t0_utc": null,
-  "t0_source": "ll2_net",
-  "updated_utc": "2026-09-16T12:00:00Z",
-  "sources": [],
+  "t0_utc": "2025-10-13T23:23:00Z",
+  "t0_source": "agency",
+  "updated_utc": "2026-09-16T12:51:01Z",
+  "sources": [
+    {
+      "kind": "agency",
+      "url": "https://www.spacex.com/launches/starship-flight-11",
+      "note": "SpaceX published timeline"
+    },
+    {
+      "kind": "ll2",
+      "id": "PENDING_LL2_UUID"
+    }
+  ],
   "goal": "PERFORMANCE TEST",
   "outcome": {
-    "booster": null,
-    "ship": null,
-    "payload": null
+    "booster": "CONTROLLED GULF SPLASHDOWN \u2014 NO TOWER CATCH",
+    "ship": "SPLASHDOWN \u2014 INDIAN OCEAN",
+    "payload": "PAYLOAD DEPLOY DEMO COMPLETE"
   },
-  "events": [],
-  "pending": true
+  "events": [
+    {
+      "id": "ss11_lift",
+      "t_sec": 0,
+      "title": "LIFTOFF",
+      "detail": "Starbase \u2014 final Block 2 / Pad 1 config flight",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_maxq",
+      "t_sec": 60,
+      "title": "MAX-Q",
+      "detail": "Peak aerodynamic pressure",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_meco",
+      "t_sec": 155,
+      "title": "BOOSTER MECO",
+      "detail": "Super Heavy most engines cut off",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_hot",
+      "t_sec": 157,
+      "title": "HOT-STAGE",
+      "detail": "Ship Raptor ignition and stage separation",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_bb",
+      "t_sec": 167,
+      "title": "BOOSTBACK START",
+      "detail": "Super Heavy boostback burn start",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_bb_end",
+      "t_sec": 216,
+      "title": "BOOSTBACK END",
+      "detail": "Super Heavy boostback burn shutdown",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_hsj",
+      "t_sec": 218,
+      "title": "HOT-STAGE JETTISON",
+      "detail": "Hot-stage jettison",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_lb",
+      "t_sec": 378,
+      "title": "LANDING BURN",
+      "detail": "Super Heavy landing burn start \u2014 Gulf splash planned",
+      "severity": "WATCH"
+    },
+    {
+      "id": "ss11_lb_end",
+      "t_sec": 394,
+      "title": "LANDING BURN END",
+      "detail": "Super Heavy landing burn shutdown",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_seco",
+      "t_sec": 536,
+      "title": "SHIP CUTOFF",
+      "detail": "Starship engine cutoff",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_dep",
+      "t_sec": 1106,
+      "title": "PAYLOAD DEPLOY START",
+      "detail": "Payload deploy demo start",
+      "severity": "WATCH"
+    },
+    {
+      "id": "ss11_dep_done",
+      "t_sec": 1531,
+      "title": "PAYLOAD DEPLOY COMPLETE",
+      "detail": "Payload deploy demo complete",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_relight",
+      "t_sec": 2267,
+      "title": "SHIP RELIGHT",
+      "detail": "Raptor in-space relight demo",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_entry",
+      "t_sec": 2861,
+      "title": "REENTRY",
+      "detail": "Starship entry",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_transonic",
+      "t_sec": 3808,
+      "title": "TRANSONIC",
+      "detail": "Starship is transonic",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_subsonic",
+      "t_sec": 3830,
+      "title": "SUBSONIC",
+      "detail": "Starship is subsonic",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_land_burn",
+      "t_sec": 4196,
+      "title": "LANDING BURN",
+      "detail": "Ship landing burn start",
+      "severity": "WATCH"
+    },
+    {
+      "id": "ss11_flip",
+      "t_sec": 4198,
+      "title": "LANDING FLIP",
+      "detail": "Landing flip",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_3to2",
+      "t_sec": 4207,
+      "title": "LANDING BURN 3\u21922",
+      "detail": "Landing burn 3 to 2 engines",
+      "severity": "INFO"
+    },
+    {
+      "id": "ss11_splash",
+      "t_sec": 4223,
+      "title": "SHIP SPLASHDOWN",
+      "detail": "Indian Ocean \u2014 exciting landing",
+      "severity": "INFO"
+    }
+  ],
+  "pending": false
 }
