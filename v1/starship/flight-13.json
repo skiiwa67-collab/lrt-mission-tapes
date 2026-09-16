@@ -1,0 +1,24 @@
+{
+  "schema": "lrt.mission_tape.v1",
+  "id": "PENDING_LL2_UUID",
+  "slug": "starship-flight-13",
+  "family": "starship",
+  "vehicle": "Starship",
+  "name": "Starship | Flight 13",
+  "provider": "SpaceX",
+  "truth": "pending",
+  "truth_note": "Placeholder until published/observed event times are locked. App must show PENDING REAL TELEMETRY until pending=false.",
+  "status": "success",
+  "t0_utc": null,
+  "t0_source": "ll2_net",
+  "updated_utc": "2026-09-16T12:00:00Z",
+  "sources": [],
+  "goal": "PERFORMANCE TEST",
+  "outcome": {
+    "booster": null,
+    "ship": null,
+    "payload": null
+  },
+  "events": [],
+  "pending": true
+}

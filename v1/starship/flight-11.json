@@ -1,0 +1,24 @@
+{
+  "schema": "lrt.mission_tape.v1",
+  "id": "PENDING_LL2_UUID",
+  "slug": "starship-flight-11",
+  "family": "starship",
+  "vehicle": "Starship",
+  "name": "Starship | Flight 11",
+  "provider": "SpaceX",
+  "truth": "pending",
+  "truth_note": "Placeholder. Fill with published/observed events only. Not MCC downlink. Not generic chopsticks template.",
+  "status": "success",
+  "t0_utc": null,
+  "t0_source": "ll2_net",
+  "updated_utc": "2026-09-16T12:00:00Z",
+  "sources": [],
+  "goal": "PERFORMANCE TEST",
+  "outcome": {
+    "booster": null,
+    "ship": null,
+    "payload": null
+  },
+  "events": [],
+  "pending": true
+}
