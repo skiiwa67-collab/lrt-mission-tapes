@@ -18,3 +18,15 @@ Optional Starship aliases under `v1/starship/flight-N.json` (same schema; includ
 Schema: `lrt.mission_tape.v1` — see `SCHEMA.md`.
 
 Starship = gold path.
+
+## Capture pipeline (ops)
+
+Live / historic tapes are produced by the Command Center scripts — **not** Play uploads.
+
+- **Ops bible:** [`CAPTURE.md`](CAPTURE.md) — PREFLIGHT → LIVE → STAMP → LOCK → CDN
+- **Scripts:** [`scripts/`](scripts/) — `seed_pending.py`, `capture_live.py`, `stamp_event.py`, `lock_published.py`, `ll2.py`, `tape_io.py`
+
+```bash
+# Flight 14 gold — launch day watch
+python3 scripts/capture_live.py --slug starship-flight-14 --watch --interval 20 --push
+```

@@ -101,11 +101,15 @@ Live poll (near real-time): while CURRENT watch on bird, poll same URL every 30�
 
 ## Capture pipeline (backend — not Play)
 
+Ops bible: [`CAPTURE.md`](CAPTURE.md). Scripts under `scripts/` (Python 3, stdlib + urllib).
+
 During LIVE (Starship gold maniacal):
-1. Poll LL2 status.
-2. Stamp events when confirmed (webcast/agency) → PATCH/PUT `{id}.json` on CDN.
-3. On terminal Success/Fail → `pending:false`, `truth:observed|published`, lock outcome.
-4. App clients pick up on next poll / HISTORIC open.
+1. **PREFLIGHT** — `seed_pending.py` / `ll2.py`: resolve LL2 uuid; write pending stub (`pending:true`, empty or LIFTOFF-only events).
+2. **LIVE** — `capture_live.py`: poll LL2 (`--watch --interval 20`). Status transitions only (Go/Hold→`hold`, In Flight→`in_flight`, Success/Failure/Partial). On first In Flight: stamp LIFTOFF `t_sec=0` if events empty; `t0_utc` wall clock (`liftoff_observed`) or keep `ll2_net`. **Never invent mid-flight events.**
+3. **WEBCAST STAMPS** — `stamp_event.py`: human stamps confirmed call-outs only (dedup by event id). Optional `--push` → git commit + push to raw GitHub CDN.
+4. **TERMINAL** — LL2 Success/Fail/Partial updates `status`; **keep `pending:true`** until published timeline locked.
+5. **LOCK** — `lock_published.py`: merge agency/SpaceX published (or observed) events → `pending:false`, `truth:published|observed`, upsert `v1/index.json`, push.
+6. App `MissionTapeStore` polls CDN; growing events replace prior. VID works even when pending.
 
 ## Out of scope v1
 
