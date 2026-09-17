@@ -1,6 +1,6 @@
 {
   "schema": "lrt.mission_tape_index.v1",
-  "updated_utc": "2026-09-16T13:09:52Z",
+  "updated_utc": "2026-09-17T12:12:54Z",
   "base": "https://raw.githubusercontent.com/skiiwa67-collab/lrt-mission-tapes/main/v1",
   "packs": [
     {
