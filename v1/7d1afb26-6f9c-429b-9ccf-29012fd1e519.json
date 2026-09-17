@@ -8,9 +8,9 @@
   "provider": "SpaceX",
   "truth": "pending",
   "truth_note": "Sparse pending stub. No invented mid-flight events. App shows PENDING REAL TELEMETRY until published/observed lock. VID OK.",
-  "status": "hold",
+  "status": "go",
   "t0_source": "ll2_net",
-  "updated_utc": "2026-09-16T13:09:52Z",
+  "updated_utc": "2026-09-17T12:12:31Z",
   "sources": [
     {
       "kind": "agency",
